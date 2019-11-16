@@ -6,5 +6,17 @@ use Illuminate\Database\Eloquent\Model;
 
 class metas extends Model
 {
-    protected $table = "site_t";
+    protected $table = "produtos";
+
+
+    
+    protected $fillable=['produto',
+    'data',
+    'marca',
+    'quantidade',
+    'valor',
+    'datatempo',
+    'peso',
+    'codigo'
+   ];
 }

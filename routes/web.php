@@ -24,3 +24,11 @@ Route::get('/home', function() {
 
 Route::get("/graficos","Site1Controller@index")->name("graficos.graficos");
 Route::get("/metas","MetasController@index")->name("graficos.metas");
+Route::get("/Forms","FormsController@index")->name("graficos.create");
+Route::post("/home","MetasController@store")->name('graficos.store');
+
+
+//Route::resource('graficos','Site1Controller');
+//Route::resource('metas','MetasController');
+//Route::resource('Forms','FormsController');
+

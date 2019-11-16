@@ -3,7 +3,7 @@
 @section('title', 'Cliente')
 
 @section('content_header')
-    <h1> Nome</h1>
+    <h1> Vendedor</h1>
     
 @stop
 
@@ -56,47 +56,6 @@
    </div>
 </div> 
 
-<div class="panel panel-primary">
-          <div class="panel-heading clearfix">
-              <h2><i>Produtos do vendedor</i></h2>
-              <div class="pull-left">
-                <a href="" class="btn btn-success btn-sm"><i class="fas fa-fax fa-sync-alt"></i> Atualizar</a>
-                <a href="" class="btn btn-warning btn-sm"><i class="fa fa-cube" aria-hidden="true"></i> Style </a>
-             </div>
-          </div>
-
-          <div class="panel-body">
-              <table  id = "tabela" class="table table-striped table-bordered table-hover">
-                  <thead>
-                    <tr>
-                      <th>ID</th>
-                      <th>Produto</th>
-                      <th>Marca</th>
-                      <th>Quantidade</th>
-                      <th>valor</th>
-                      <th>peso</th>
-                      <th>codigo</th>
-                
-                    </tr>
-                 </thead>
-                   <tbody>     
-                      <tr>
-                       <td>1</td>
-                       <td>Perfume</td>
-                       <td>Kaiak</td>
-                       <td>10</td>
-                       <td>120,34</td>
-                       <td>345g</td>
-                       <td>0001</td>
-                      </tr>
-                     </tbody>
-                  </table>
-           </div>
-
-         <div class="panel-footer">
-            <b> Produtos Cadastrados</b>
-         </div>
-</div>
 
 <div class="panel panel-default">
   <div class="panel-body">
@@ -344,9 +303,5 @@
 @stop
 
 @section('js')
-<script> 
-$(document).ready( function () {
-    $('#tabela').DataTable();
-} );
-</script>
+
 @stop

@@ -52,4 +52,62 @@
      </section>
   </div>
 </div>
+
+<div class="panel panel-primary">
+          <div class="panel-heading clearfix">
+              <h2><i>Produtos do vendedor</i></h2>
+              <div class="pull-left">
+                <a href="#" class="btn btn-success btn-sm"><i class="fas fa-fax fa-sync-alt"></i> Atualizar</a>
+                <a href="{{ route('graficos.create') }}" class="btn btn-warning btn-sm"><i class="fa fa-cube" aria-hidden="true"></i> Formulario</a>
+             </div>
+          </div>
+
+          <div class="panel-body">
+              <table  id = "tabela" class="table table-striped table-bordered table-hover">
+                  <thead>
+                    <tr>
+                      <th>ID</th>
+                      <th>Produto</th>
+                      <th>Marca</th>
+                      <th>Quantidade</th>
+                      <th>valor</th>
+                      <th>peso</th>
+                      <th>codigo</th>
+                
+                    </tr>
+                 </thead>
+                   <tbody>     
+                     @foreach($dados as $produto)
+                      <tr>
+                       <td>{{$produto->produto}}</td>
+                       <td>{{$produto->data}}</td>
+                       <td>{{$produto->marca}}</td>
+                       <td>{{$produto->quantidade}}</td>
+                       <td>{{$produto->valor}}</td>
+                       <td>{{$produto->peso}}</td>
+                       <td>{{$produto->codigo}}</td>
+                      </tr>
+                      @endforeach
+                     </tbody>
+                  </table>
+           </div>
+
+         <div class="panel-footer">
+            <b> Produtos Cadastrados</b>
+         </div>
+</div>
+
+
+@stop
+
+@section('css')
+<link rel="stylesheet" href="/css/admin_custom.css">
+@stop
+
+@section('js')
+<script> 
+$(document).ready( function () {
+    $('#tabela').DataTable();
+} );
+</script>
 @stop

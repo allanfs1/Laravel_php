@@ -30,7 +30,7 @@ return [
     |
     */
 
-    'logo' => '<b>Admin</b>LTE',
+    'logo' => '<b>LOJA</b>VE',
 
     'logo_mini' => '<b>A</b>LT',
 
@@ -45,7 +45,7 @@ return [
     |
     */
 
-    'skin' => 'blue',
+    'skin' => 'yellow',
 
     /*
     |--------------------------------------------------------------------------
@@ -128,7 +128,7 @@ return [
     'menu' => [
         [
             'text' => 'search',
-            'search' => true,
+            'search' => false,
         ],
         ['header' => 'Menu de Navegação'],
         [
@@ -140,17 +140,13 @@ return [
         [
             'text'        => 'DastBoard',
             'url'         => 'admin/pages',
-            'icon'        => 'far fa-file',
+            'icon'        => 'fa fa-home fa-fw',
             'submenu' => [
                 [
                     'text' => 'DastBoard Mack 1.0',
                     'url'  => '#',
                 ],
-                [
-                    'text' => 'DastBoard Mack 2.0',
-                    'url'  => '#',
-                ],
-
+               
             ]
  
         ],
@@ -162,23 +158,23 @@ return [
 
 
         [
-            'text' => 'Tabelas',
-            'icon' => 'fa fa-bars',
+            'text' => 'Cadastro',
+            'icon' => 'fa fa-book fa-fw',
             'route'=> 'graficos.metas'
         ],
 
 
         [
             'text' => 'Formularios',
-            'url'  => 'admin/settings',
-            'icon' => 'fas fa-fw fa-lock',
+            'icon' => 'fa fa-align-justify',
             'label_color' => 'danger',
+            'route'=> 'graficos.create'
 
         ],
 
         [
             'text' => 'Graficos',
-            'icon' => 'fas fa-fw fa-lock',
+            'icon' => 'fa fa-camera-retro',
             'label'       => "Metas",
             'label_color' => 'danger',
             'route'=> 'graficos.graficos'
@@ -269,14 +265,7 @@ return [
             'text'       => 'important',
             'icon_color' => 'red',
         ],
-        [
-            'text'       => 'warning',
-            'icon_color' => 'yellow',
-        ],
-        [
-            'text'       => 'information',
-            'icon_color' => 'aqua',
-        ],
+    
     ],
 
     /*

@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\site1;
+use App\forms;
 use Illuminate\Http\Request;
 
-class Site1Controller extends Controller
+class FormsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +14,8 @@ class Site1Controller extends Controller
      */
     public function index()
     {
-       
-        return view("graficos.graficos");
+        return view("graficos.create");
+        //
     }
 
     /**
@@ -25,7 +25,7 @@ class Site1Controller extends Controller
      */
     public function create()
     {
-        
+        //
     }
 
     /**
@@ -36,21 +36,16 @@ class Site1Controller extends Controller
      */
     public function store(Request $request)
     {
-
-
+        //
     }
-
-
-
-
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\site1  $site1
+     * @param  \App\forms  $forms
      * @return \Illuminate\Http\Response
      */
-    public function show(site1 $site1)
+    public function show(forms $forms)
     {
         //
     }
@@ -58,10 +53,10 @@ class Site1Controller extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\site1  $site1
+     * @param  \App\forms  $forms
      * @return \Illuminate\Http\Response
      */
-    public function edit(site1 $site1)
+    public function edit(forms $forms)
     {
         //
     }
@@ -70,10 +65,10 @@ class Site1Controller extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\site1  $site1
+     * @param  \App\forms  $forms
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, site1 $site1)
+    public function update(Request $request, forms $forms)
     {
         //
     }
@@ -81,10 +76,10 @@ class Site1Controller extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\site1  $site1
+     * @param  \App\forms  $forms
      * @return \Illuminate\Http\Response
      */
-    public function destroy(site1 $site1)
+    public function destroy(forms $forms)
     {
         //
     }

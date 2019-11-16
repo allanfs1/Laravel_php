@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class site1 extends Model
+class forms extends Model
 {
-    protected $table = "produtos";
+    //
 }

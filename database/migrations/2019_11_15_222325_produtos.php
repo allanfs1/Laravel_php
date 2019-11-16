@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class SiteT extends Migration
+class Produtos extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,17 @@ class SiteT extends Migration
      */
     public function up()
     {
-        Schema::create('site_t', function (Blueprint $table) {
+        
+        Schema::create('produtos', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->String('nome',45)->nullable();
+            $table->String('produto',45)->nullable();
             $table->date('data');
-            $table->String('Sexo',2)->nullable();
-            $table->String('nome_mae',45)->nullable();
-            $table->String('nome_pai',45)->nullable();
-            $table->timestamp('time');
+            $table->String('marca',2)->nullable();
+            $table->String('quantidade',45)->nullable();
+            $table->String('valor',45)->nullable();
+            $table->timestamp('datatempo');
+            $table->String('peso',45)->nullable();
+            $table->String('codigo');
         });//
     }
 

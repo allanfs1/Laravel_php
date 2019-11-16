@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\metas;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB; 
 
 class MetasController extends Controller
 {
@@ -14,6 +15,7 @@ class MetasController extends Controller
      */
     public function index()
     {
+       
         $dados = metas::all();
         return view("graficos.metas",compact('dados'));
     }
@@ -25,7 +27,8 @@ class MetasController extends Controller
      */
     public function create()
     {
-        //
+        
+        return view('graficos.create');
     }
 
     /**
@@ -36,9 +39,36 @@ class MetasController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+        //dd($request);
+       
+        DB::table('produtos')->insert([
+
+            'produto'=> $request->produto,
+            'data'=> $request->data,
+            'marca'=> $request->marca,
+            'quantidade' => $request->quantidade,
+            'valor' => $request->valor,
+            'peso' =>  $request->peso,
+            'codigo' => $request->codigo
+         ]);
+
+        
+       
+         return redirect()->route('graficos.metas');
+      
     }
 
+
+    public function formata_data($data){
+        $d = substr($data,6,4) . "-" . substr($data,3,2) . "-" . substr($data,0,2);
+ 
+        return $d;
+ 
+      }
+
+     
+    
     /**
      * Display the specified resource.
      *
