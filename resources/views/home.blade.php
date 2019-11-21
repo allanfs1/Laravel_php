@@ -9,11 +9,22 @@
 
 @section('content')
 <div class="panel panel-default">
-  <div class="panel-heading">
-    <h3 class="panel-title">Ficha Pessoal</h3>
-  </div>
-
   <div class="panel-body">
+        <div class="info-box bg-red">
+           <span class="info-box-icon">
+           <i class="ion ion-ios-pricetag-outline"></i>
+           </span>
+           <div class="info-box-content">
+             <span class="info-box-text"> Vendedor</span>
+             <span class="info-box-number"> 001</span>
+            </div>
+            <div class="progress">
+               <div class="progress-bar" style =" width: 50% "></div>
+            </div>
+            <span class="progress-description">50% do Cadastro Completado</span>
+         </div>
+         
+        
          <div>
             <div class="box box-danger">
                <div>
@@ -61,7 +72,7 @@
   <div class="panel-body">
          <div class="col-md-12">
               <!-- DIRECT CHAT -->
-              <div class="box box-warning direct-chat direct-chat-warning">
+              <div class="box box-warning direct-chat direct-chat-danger">
                 <div class="box-header with-border">
                   <h4 class="box-title"><i>Chat Direto</i></h4>
 
@@ -261,9 +272,9 @@
             </div>
 </div> 
 
-<div class="box box-warning direct-chat direct-chat-warning">
+<div class="box box-success">
       <h3 class="box-header with-border">
-         <h3 class="box-title">Historico</h3>
+         <h3 class="box-title"> <i class="fa fa-users" aria-hidden="true"></i> Cadastro do <small>Vendedor</small></h3>
             <div class="box-tools pull-right">
                     <span data-toggle="tooltip" title="" class="badge bg-red" data-original-title="3 New Messages">145</span>
                     <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
@@ -276,19 +287,66 @@
            </h3>
        </div> 
 
-       <div class="box-body">
+      <form class="box-body">
         <!-- Conversations are loaded here -->
-        <div class="direct-chat-messages">
-         <!-- Message. Default to the left -->
-           <div class="direct-chat-msg">
-             <div class="direct-chat-info clearfix">
-               <div class="direct-chat-info clearfix">
-                    <span class="direct-chat-name pull-left"> Allan Ferreira de Souza</span>
-                    <span class="direct-chat-timestamp pull-right">14:23 </span>
-                </div>    
-               </div>
-             </div> 
-         </div>   
+      <div class="col-md-12">
+         <div class="row">
+          <section class="content">
+            <form action="" method="POST">
+              <div class="panel panel-default">
+                 <div class="panel-heading">
+                 <h6>Todos os campos são obrigatótios</h6>
+                </div>
+
+                <div class="panel-body">
+                  <div class="form-group">
+                    <label for="produto" >Nome:</label>
+                    <div class="input-group">
+                      <span class="input-group-addon"><i class="fa fa-user" aria-hidden="true"></i></span>
+                      <input type="text" id="produto" name="produto" class="form-control">
+                     </div>
+                   </div>
+                 </div>
+
+                 <div class="panel-body">
+                  <div class="form-group">
+                    <label for="produto" >Email:*</label>
+                    <div class="input-group">
+                      <span class="input-group-addon"><i class="fa fa-envelope-square" aria-hidden="true"></i></span>
+                      <input type="text" id="produto" name="produto" class="form-control">
+                     </div>
+                   </div>
+                 </div>
+
+
+                 <div class="panel-body">
+                  <div class="form-group">
+                    <label for="produto" >sexo:*</label>
+                    <div class="input-group">
+                      <span class="input-group-addon"><i class="fa fa-users" aria-hidden="true"></i></span>
+                      <input type="text" id="produto" name="produto" class="form-control">
+                     </div>
+                   </div>
+                 </div>
+
+                 <div class="panel-body">
+                  <div class="form-group">
+                    <label for="produto" >Data:*</label>
+                    <div class="input-group">
+                      <span class="input-group-addon"><i class="fa fa-calendar" aria-hidden="true"></i></span>
+                      <input type="text" id="produto" name="produto" class="form-control">
+                     </div>
+                   </div>
+                 </div>
+
+                </div>
+              </form>
+           </section>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </div>
 </div>
 

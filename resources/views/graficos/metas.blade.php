@@ -4,11 +4,137 @@
 @section('title', 'Cliente')
 
 @section('content_header')
-    <h1> Nome</h1>
-    
+    <h1> Calendario</h1>
+    <!-- CSS-->
+<style>
+*{box-sizing: border-box;}
+ul {list-style-type: none;}
+body {font-family: Verdana, sans-serif;}
+
+.month {
+  padding: 70px 25px;
+  width: 100%;
+  background: #5AAF9c;
+  text-align: center;
+}
+
+.month ul {
+  margin: 0;
+  padding: 0;
+}
+
+.month ul li {
+  color: white;
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.month .prev {
+  float: left;
+  padding-top: 10px;
+}
+
+.month .next {
+  float: right;
+  padding-top: 10px;
+}
+
+.weekdays {
+  margin: 0;
+  padding: 10px 0;
+  background-color: #FFA;
+}
+
+.weekdays li {
+  display: inline-block;
+  width: 13.6%;
+  color: #666;
+  text-align: center;
+}
+
+.days {
+  padding: 10px 0;
+  background: #eee;
+  margin: 0;
+}
+
+.days li {
+  list-style-type: none;
+  display: inline-block;
+  width: 13.6%;
+  text-align: center;
+  margin-bottom: 5px;
+  font-size:12px;
+  color: #777;
+}
+
+.days li .active {
+  padding: 5px;
+  background: #1abc9c;
+  color: white !important
+}
+
+</style>
 @stop
 
 @section('content')
+
+<div class="month">
+  <ul>
+    <li class="prev">&#10094;</li>
+    <li class="next">&#10095;</li>
+    <li>Outubro<br><span style="font-size:25px">2019</span></li>
+  </ul>
+</div>
+
+<ul class="weekdays">
+  <li>S</li>
+  <li>D</li>
+  <li>S</li>
+  <li>T</li>
+  <li>Q</li>
+  <li>Q</li>
+  <li>S</li>
+</ul>
+
+<ul class="days">
+  <li>1</li>
+  <li>2</li>
+  <li>3</li>
+  <li>4</li>
+  <li>5</li>
+  <li>6</li>
+  <li>7</li>
+  <li>8</li>
+  <li>9</li>
+  <li><span class="active">10</span></li>
+  <li>11</li>
+  <li>12</li>
+  <li>13</li>
+  <li>14</li>
+  <li>15</li>
+  <li>16</li>
+  <li>17</li>
+  <li>18</li>
+  <li>19</li>
+  <li>20</li>
+  <li>21</li>
+  <li>22</li>
+  <li>23</li>
+  <li>24</li>
+  <li>25</li>
+  <li>26</li>
+  <li>27</li>
+  <li>28</li>
+  <li>29</li>
+  <li>30</li>
+  <li>31</li>
+  
+
+</ul>
+<br>
+
 <div class="panel panel-default">
    <div class="panel-body">
   <section class = "content">
@@ -48,6 +174,18 @@
           </div>
         </div>
      </div>   
+
+     <div class = "col-md-3 col-sm-6 col-xs-12">
+        <div class = "info-box">
+          <span class="info-box-icon bg-orange">
+             <i class="fa fa-star" aria-hidden="true"></i>
+          </span>
+          <div class="info-box-content"> 
+              <span class="info-box-text">Metas</span>
+              <span class="info-box-number">25%</span>
+          </div>
+        </div>
+     </div> 
   </div>  
      </section>
   </div>
@@ -111,3 +249,4 @@ $(document).ready( function () {
 } );
 </script>
 @stop
+
