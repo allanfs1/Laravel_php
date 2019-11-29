@@ -6,9 +6,25 @@ use App\metas;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB; 
 
+
+
+
 class MetasController extends Controller
 {
+
+
+
+
+    /** 
+     *index   - exibe uma lista dos registro da tabela 
+     *create  - exibe um form para cadastrar dados
+     *store   - recebe os dados do form (create) e envia para o model gravar na tabela (operação de inserção)
+     *edit    - exibe o form para alterar dados de determinado registro lido.
+     *show    - recebe os dados do form (edit) e envia para  o Model atualizar na tabela(operação de update) -
+     *destroy - deleta um determinado registro
+     */
     /**
+
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
@@ -75,9 +91,12 @@ class MetasController extends Controller
      * @param  \App\metas  $metas
      * @return \Illuminate\Http\Response
      */
-    public function show(metas $metas)
+    public function show($id)
     {
-        //
+        
+        $dados = metas::find($id);
+        return view("graficos.show",compact('dados'));
+ 
     }
 
     /**
@@ -86,9 +105,13 @@ class MetasController extends Controller
      * @param  \App\metas  $metas
      * @return \Illuminate\Http\Response
      */
-    public function edit(metas $metas)
+    public function edit( $id)
     {
-        //
+       
+        $dados = metas::find($id);
+        return view("graficos.edit",compact('dados'));
+          
+
     }
 
     /**
@@ -98,9 +121,24 @@ class MetasController extends Controller
      * @param  \App\metas  $metas
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, metas $metas)
+    public function update(Request $request, $id)
     {
-        //
+        //dd($request);
+        DB::table('produtos')
+        ->where('id',$id)
+        ->update([
+            'produto'=> $request->produto,
+            'data'=> $request->data,
+            'marca'=> $request->marca,
+            'quantidade' => $request->quantidade,
+            'valor' => $request->valor,
+            'peso' =>  $request->peso,
+            'codigo' => $request->codigo
+         ]);
+
+        
+       
+         return redirect()->route('graficos.metas');
     }
 
     /**
@@ -109,8 +147,10 @@ class MetasController extends Controller
      * @param  \App\metas  $metas
      * @return \Illuminate\Http\Response
      */
-    public function destroy(metas $metas)
+    public function destroy($id)
     {
-        //
+        metas::destroy($id);
+
+        return redirect()->route('graficos.metas');
     }
 }

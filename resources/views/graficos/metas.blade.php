@@ -221,9 +221,31 @@ body {font-family: Verdana, sans-serif;}
                        <td>{{$produto->data}}</td>
                        <td>{{$produto->marca}}</td>
                        <td>{{$produto->quantidade}}</td>
-                       <td>{{$produto->valor}}</td>
-                       <td>{{$produto->peso}}</td>
+                       <td>RS:{{$produto->valor}}</td>
+                       <td>{{$produto->peso}}g</td>
                        <td>{{$produto->codigo}}</td>
+                       <td>
+                           <a href="{{ route('graficos.show',  $produto->id) }}" class="btn btn-primary btn-xs">
+                            <i class="fas fa-fx fa-eye"></i>
+                           </a>
+
+                           <a href="{{ route('graficos.edit',  $produto->id) }}" class="btn btn-warning btn-xs">
+                             <i class="fas fa-fx fa-edit"></i>
+                           </a>
+
+
+                           <!-- botao de exclusao -->
+                           <form action="{{ route('graficos.destroy', $produto->id) }}" method="post" onsubmit="return confirm('Você tem certeza de que quer excluir este registro?');" style="display: inline-block;">
+                             <input type="hidden" name="_method" value="DELETE">
+                             <input type="hidden" name="_token" value="{{ csrf_token() }}">
+
+                             <button type="submit" class="btn btn-xs btn-danger">
+                                 <i class="fas fa-fx fa-trash-alt"></i>
+                             </button>
+                           </form>     
+                                   
+                         </td>
+
                       </tr>
                       @endforeach
                      </tbody>

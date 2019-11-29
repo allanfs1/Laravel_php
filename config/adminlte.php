@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'title' => 'AdminLTE 2',
+    'title' => 'Fashion UP',
 
     'title_prefix' => '',
 
@@ -30,7 +30,7 @@ return [
     |
     */
 
-    'logo' => '<b>LOJA</b>VE',
+    'logo' => '<b>Fashion</b>UP',
 
     'logo_mini' => '<b>A</b>LT',
 
